@@ -2,11 +2,11 @@
 The Colors Application is used to add colors in a user personal account that can be searched and returned to the user at any time. 
 
 # Technologies Used
-Github/Git
-Powershell
-VS Code
-PHP
-MYSQL
+  Github/Git
+  Powershell
+  VS Code
+  PHP
+  MYSQL
 
 # Setup
   1. Navigate to Powershell/Terminal
