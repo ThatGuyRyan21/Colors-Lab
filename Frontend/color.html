@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Color Manager</title>
+    <script type="text/javascript" src="js/code.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+</head>
+  
+<body onload="readCookie();">
+
+    <h1 id="title">COP 4331 LAMP Stack Demo</h1>
+
+    <div id="loggedInDiv">
+        <button type="button" id="logoutButton" class="buttons" onclick="doLogout();"> Log Out </button>
+        <br />
+        <span id="userName">Logged in as </span>
+    </div>
+
+    <br />
+
+    <div id="accessUIDiv">
+        <input type="text" id="searchText" placeholder="Color To Search For">
+        <button type="button" class="buttons" onclick="searchColors();"> Search Color </button>
+        <span id="colorSearchResult"></span>
+        <div id="colorList" style="text-align: center; margin-top: 10px;"></div>
+    </div>
+
+    <br />
+
+    <div id="accessUIDiv">
+        <input type="text" id="colorText" placeholder="Color To Add">
+        <button type="button" class="buttons" onclick="addColor();"> Add Color </button>
+        <span id="colorAddResult"></span>
+    </div>
+
+</body>
+</html>
