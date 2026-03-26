@@ -1,0 +1,18 @@
+@startuml
+start
+
+:Receive JSON payload (color, userId);
+:Attempt Database Connection;
+
+if (Connection Error?) then (yes)
+  :Return JSON Error (Connection failed);
+else (no)
+  :Prepare SQL INSERT Statement;
+  :Bind "userId" and "color" parameters;
+  :Execute SQL Statement;
+  :Close Connection;
+  :Return JSON Success (Empty Error string);
+endif
+
+stop
+@enduml
