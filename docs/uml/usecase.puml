@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+
+actor "User" as user
+
+package "Colors API / System" {
+  usecase "Login to Account" as UC1
+  usecase "Add a Color" as UC2
+  usecase "Search Saved Colors" as UC3
+}
+
+user --> UC1
+user --> UC2
+user --> UC3
+
+@enduml
