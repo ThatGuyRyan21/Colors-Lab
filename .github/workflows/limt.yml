@@ -1,4 +1,4 @@
-name: CI Linting Workflow
+name: CI Linting & Testing Workflow
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ main, master ]
 
 jobs:
-  lint:
+  lint_and_test:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,4 +29,7 @@ jobs:
         run: npx stylelint "**/*.css"
 
       - name: Lint JavaScript
-        run: npx eslint "**/*.js"
+        run: npx eslint "**/*.js" --ignore-pattern "*.test.js"
+
+      - name: Run Jest Tests
+        run: npm test
